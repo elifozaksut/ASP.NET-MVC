@@ -1,0 +1,75 @@
+﻿@model Models.Article
+
+@{
+
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    
+                    <div class="content">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#1" data-toggle="tab">Makale Listesi</a></li>
+                            <li><a href="#2" data-toggle="tab">Makale Oluştur</a></li>
+                        </ul>
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane active" id="1" style="padding:20px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th> Makale Id</th>
+                                                    <th>Başlık</th>
+                                                    <th>İçerik</th>
+                                                    <th>Kategorisi</th>
+                                                    <th>Yazarı</th>
+                                                    <th>Fotoğrafı</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in (IEnumerable<Models.Article>)ViewBag.ArticleList)
+	                                           {
+                                                    <tr>
+                                                        <td>@item.ID</td>
+                                                        <td>@item.Title</td>
+                                                        <td>@item.Content</td>
+                                                        <td>@item.CategoryId</td>
+                                                        <td>@item.AuthorId</td>
+                                                        <td>@item.Photo
+                                                        <div class="pull-right">
+                                                            @Html.ActionLink("Düzenle", "Update", "Article", new { @class = "btn btn-success" })
+                                                            @Html.ActionLink("Sil", "Delete", "Article", new { @class="btn btn-danger"})
+                                                        </div>
+                                                        
+                                                        </td>
+                                                    </tr>
+
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="2" style="padding:20px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @Html.Partial("Insert")
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

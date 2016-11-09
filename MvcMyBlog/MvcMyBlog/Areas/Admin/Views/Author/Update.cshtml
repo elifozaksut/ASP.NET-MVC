@@ -1,0 +1,39 @@
+﻿
+@{
+
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+@model Models.Author
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Yazar Güncelleme</h4>
+                    </div>
+                    <div class="content">
+                        @using (Html.BeginForm("Update", "Author", FormMethod.Post))
+                        {
+                            <div class="form-group">
+                                <label>Yazar ID:</label>
+                                @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                                <br />
+                                <label>Yazar Adı:</label>
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                <br />
+                                <label>Yazar Soyadı:</label>
+                                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control" } })
+                                <br />
+                                
+                            </div>
+                            <button class="btn btn-info btn-fill form-control">Güncelle</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

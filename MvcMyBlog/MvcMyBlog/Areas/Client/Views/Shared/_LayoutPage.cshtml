@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Elif Özaksüt Blog Sayfası</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="~/Assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+    <link href="~/Assets/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- js -->
+    <script src="~/Assets/js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="~/Assets/js/move-top.js"></script>
+    <script type="text/javascript" src="~/Assets/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+</head>
+<body>
+    <div class="banner-body">
+        <div class="container">
+            <!-- header -->
+            <div class="header">
+                <div class="header-nav">
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/Home/Index"><span>E</span>lif Özaksüt</a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="hvr-bounce-to-bottom active"><a href="/Home/Index">Anasayfa</a></li>
+                                <li class="hvr-bounce-to-bottom"><a href="/Home/About">Hakkımda</a></li>
+                                <li class="hvr-bounce-to-bottom"><a href="Portfolio.html">Makaleler</a></li>
+                                <li class="hvr-bounce-to-bottom"><a href="Pages.html">Projeler</a></li>
+                                <li class="hvr-bounce-to-bottom"><a href="contact.html"> İletişim</a></li>
+                            </ul>
+
+
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div>
+
+                <!-- search-scripts -->
+                <script src="js/classie.js"></script>
+                <script src="js/uisearch.js"></script>
+                <script>
+                    new UISearch(document.getElementById('sb-search'));
+                </script>
+                <!-- //search-scripts -->
+            </div>
+            <!-- //header -->
+            <!-- header-bottom -->
+            <div class="header-bottom">
+                <div class="header-bottom-top">
+                    <ul>
+                        <li><a href="#" class="g"> </a></li>
+                        <li><a href="#" class="p"> </a></li>
+                        <li><a href="#" class="facebook"> </a></li>
+                        <li><a href="#" class="twitter"> </a></li>
+
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+                <div class="col-md-3 pull-right" style="padding-right:0px; padding-bottom:50px">
+                    <div class="sign-in">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Arama Yap" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- banner -->
+                <!-- //banner -->
+                <!-- banner-bottom -->
+                <!-- //banner-bottom -->
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+            <!-- //header-bottom -->
+        </div>
+    </div>
+    <!-- //banner-body -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-grids">
+                <div class="col-md-3 footer-grid">
+                    <h3>Hakkımda</h3>
+                    <div class="footer-grd-left">
+                        <img src="~/Assets/images/11.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd-left">
+                        <p>
+                            Nam libero tempore, cum
+                            soluta nobis est eligendi optio cumque nihil impedit quo minus
+                            id quod maxime placeat facere possimus, omnis voluptas assumenda
+                            est, omnis dolor repellendus
+                        </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3>Son Yazılar</h3>
+                    <ul>
+                        <li><a href="#">Başlık 1</a></li>
+                        <li><a href="#">Başlık 2</a></li>
+                        <li><a href="#">Başlık 3</a></li>
+                        <li><a href="#">Başlık 4</a></li>
+                        <li><a href="#">Başlık 5</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3>Sayfalar</h3>
+                    <ul>
+                        <li><a href="/Home/Index">Anasayfa</a></li>
+                        <li><a href="/Home/About">Hakkımda</a></li>
+                        <li><a href="#">Makaleler</a></li>
+                        <li><a href="#">Projeler</a></li>
+                        <li><a href="#">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3>Burayı kullanabiliriz ama fikrim yok</h3>
+                    <div class="footer-grd">
+                        <img src="~/Assets/images/7.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="~/Assets/images/8.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="~/Assets/images/9.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="footer-grd">
+                        <img src="~/Assets/images/10.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="~/Assets/images/7.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="~/Assets/images/8.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2016 Elif Özaksüt | All rights reserved </p>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- for bootstrap working -->
+    <script src="~/Assets/js/bootstrap.js"> </script>
+    <!-- //for bootstrap working -->
+</body>
+</html>

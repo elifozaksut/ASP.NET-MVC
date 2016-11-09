@@ -1,0 +1,60 @@
+﻿
+@{
+   
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                   
+                    <div class="content">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#1" data-toggle="tab">Yazar Listesi</a></li>
+                            <li><a href="#2" data-toggle="tab">Yazar Ekle</a></li>
+                        </ul>
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane active" id="1" style="padding:20px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Yazar ID</th>
+                                                    <th>Yazar ADı</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in (IEnumerable<Models.Author>)ViewBag.AuthorList)
+                                                {
+                                                    <tr>
+                                                        <td>@item.ID</td>
+                                                        <td>@item.Name @item.Surname
+                                                        <div class="pull-right">
+                                                            @Html.ActionLink("Düzenle","Update","Author", new { ID = item.ID}, new { @class="btn btn-success"})
+                                                            @Html.ActionLink("Sil", "Delete", "Author", new {  ID = item.ID}, new { @class="btn btn-danger"})
+                                                        </div>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="2" style="padding:20px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @Html.Partial("Insert")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
